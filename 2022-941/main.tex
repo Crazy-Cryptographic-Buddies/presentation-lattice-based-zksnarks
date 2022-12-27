@@ -1,0 +1,44 @@
+\documentclass{beamer}
+
+\usetheme{metropolis}
+
+\title{Lattice-Based SNARKs: Publicly Verifiable, Preprocessing, and Recursively Composable}
+\date{28 December 2022}
+
+\input{macros.tex}
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}{Outline}
+		\tableofcontents
+	\end{frame}
+	
+	\section{Introduction}
+	\input{section_introduction.tex}
+	
+	\section{Vector Commitment}
+	\input{section_vector_commitment.tex}
+	
+	\section{Technical Overview}
+	\input{section_technical_overview.tex}
+	
+	\section{New Assumptions: $\kmisis$ and $\krisis$}
+	\input{section_new_lattice_assumptions.tex}
+	
+	\section{Vector Commitment from $\kmisis$}
+	\input{section_vector_commitment_from_kmisis.tex}
+	
+	\section{zkSNARKs for PolySAT}
+	\input{section_zksnarks_for_polysat.tex}
+	
+	\begin{frame}[allowframebreaks]{References}
+		\setbeamertemplate{bibliography item}[text]
+		\bibliographystyle{alpha}
+		\bibliography{refs.bib}
+		
+	\end{frame}
+	
+\end{document}
