@@ -13,3 +13,11 @@
 		\item$\Verify(\pp_{f, y}, \mathbf{z}, \mathbf{c}, \pi)$: verify whether $f(\mathbf{z}, \mathbf{x}) = g(\mathbf{z})$.
 	\end{itemize}
 \end{frame}
+
+\begin{frame}{Security Requirements}
+	\begin{itemize}
+		\item \textbf{Correctness.}
+		\item \textbf{Extractability.} Exists $\extractor$ s.t.  $\left(f, y, \mathbf{z}, \mathbf{c}, \pi \Vert \mathbf{x}, \mathbf{r}\right) \leftarrow (\adversary\Vert \extractor)(\pp, \mathbf{r}_\mathcal{A})$ implies $\mathbf{x}$ matches $\adversary$'s output $(f, y, \mathbf{z}, \mathbf{c}, \pi)$.
+		\item \textbf{Compactness.} $\mathbf{c}$ and $\pi$ are small.
+	\end{itemize}
+\end{frame}
