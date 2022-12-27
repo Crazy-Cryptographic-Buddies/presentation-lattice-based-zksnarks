@@ -1,0 +1,15 @@
+% !TeX root = main.tex
+\begin{frame}{Syntax}
+	A vector commitment scheme is a tuple of algorithms
+	\begin{equation*}
+		(\Setup, \Com, \Open, \Verify, \PreVerify)
+	\end{equation*}
+	
+	\begin{itemize}
+		\item$\Setup$: return public parameter $\pp$.
+		\item$\Com(\pp, \mathbf{x})$: return commitment $\mathbf{c}$, auxiliary information $\aux$.
+		\item$\Open(\pp, f(\cdot, \cdot), \mathbf{z}, \aux)$: return proof $\pi$ for $f(\mathbf{z}, \mathbf{x})$. 
+		\item$\PreVerify(\pp, f(\cdot, \cdot), y(\cdot))$: return public parameter $\pp_{f, y}$.
+		\item$\Verify(\pp_{f, y}, \mathbf{z}, \mathbf{c}, \pi)$: verify whether $f(\mathbf{z}, \mathbf{x}) = g(\mathbf{z})$.
+	\end{itemize}
+\end{frame}
