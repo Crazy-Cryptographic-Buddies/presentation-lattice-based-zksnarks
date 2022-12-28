@@ -1,12 +1,12 @@
 \begin{frame}{Defining Function $f(\cdot, \cdot)$}
-	$\mathcal{E}_k = \{\mathbf{e} \in \mathbb{Z}_w : \lVert\mathbf{e}\rVert_1 = k\}$.
+	$\mathcal{E}_k = \{\mathbf{e} \in \mathbb{Z}_w : \lVert\mathbf{e}\rVert_1 = k\}$.\pause
 	
 	$\displaystyle f(\mathbf{Z}, \mathbf{X}) = \left(\sum_{1 \leq k \leq d, \mathbf{e} \in \mathcal{E}_k} f_{i,\mathbf{e}}(\mathbf{Z}) \cdot\mathbf{X}^\mathbf{e}\right)_{i \in \mathbb{Z}_t}$.
 \end{frame}
 \begin{frame}{High Level Idea for Vector Commitment from $\kmisis$}
-	\textbf{Commitment to $\mathbf{x} \in \mathcal{R}_q^{w}$:} $c = \mathbf{v}^\top \cdot \mathbf{x} = \sum_{i \in \mathbb{Z}_w}v_i\cdot x_i$.
+	\textbf{Commitment to $\mathbf{x} \in \mathcal{R}_q^{w}$:} $c = \mathbf{v}^\top \cdot \mathbf{x} = \sum_{i \in \mathbb{Z}_w}v_i\cdot x_i$.\pause
 	
-	\textbf{Observation.} $\explain{\sum_{1\leq k\leq d, \mathbf{e} \in \mathcal{E}_k}\binom{k}{\mathbf{e}}^{-1}\cdot f_{i,\mathbf{e}}(\mathbf{Z})\cdot \mathbf{v}^{-\mathbf{e}}\cdot C^k}{\text{Verifier knows}} = \explain{f(\mathbf{Z}, \mathbf{x})}{\text{Verifier knows}} + B$. 
+	\textbf{Observation.} $\explain{\sum_{1\leq k\leq d, \mathbf{e} \in \mathcal{E}_k}\binom{k}{\mathbf{e}}^{-1}\cdot f_{i,\mathbf{e}}(\mathbf{Z})\cdot \mathbf{v}^{-\mathbf{e}}\cdot C^k}{\text{Verifier knows}} = \explain{f(\mathbf{Z}, \mathbf{x})}{\text{Verifier knows}} + B$. \pause
 	
 	In the opening, prover shows that he knows $B$ by applying combinations of short vectors in $\kmisis$ assumption.
 \end{frame}

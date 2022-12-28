@@ -2,22 +2,22 @@
 \begin{frame}{Syntax}
 	A vector commitment scheme is a tuple of algorithms
 	\begin{equation*}
-		(\Setup, \Com, \Open, \Verify, \PreVerify)
+		(\Setup, \Com, \Open, \Verify, \PreVerify)\pause
 	\end{equation*}
 	
 	\begin{itemize}
-		\item$\Setup$: return public parameter $\pp$.
-		\item$\Com(\pp, \mathbf{x})$: return commitment $\mathbf{c}$, auxiliary information $\aux$.
-		\item$\Open(\pp, f(\cdot, \cdot), \mathbf{z}, \aux)$: return proof $\pi$ for $f(\mathbf{z}, \mathbf{x})$. 
-		\item$\PreVerify(\pp, f(\cdot, \cdot), y(\cdot))$: return public parameter $\pp_{f, y}$.
-		\item$\Verify(\pp_{f, y}, \mathbf{z}, \mathbf{c}, \pi)$: verify whether $f(\mathbf{z}, \mathbf{x}) = g(\mathbf{z})$.
+		\item$\Setup$: return public parameter $\pp$.\pause
+		\item$\Com(\pp, \mathbf{x})$: return commitment $c$, auxiliary information $\aux$.\pause
+		\item$\Open(\pp, f(\cdot, \cdot), \mathbf{z}, \aux)$: return proof $\pi$ for $f(\mathbf{z}, \mathbf{x})$. \pause
+		\item$\PreVerify(\pp, f(\cdot, \cdot), y(\cdot))$: return public parameter $\pp_{f, y}$.\pause
+		\item$\Verify(\pp_{f, y}, \mathbf{z}, c, \pi)$: verify whether $f(\mathbf{z}, \mathbf{x}) = g(\mathbf{z})$.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Security Requirements}
 	\begin{itemize}
-		\item \textbf{Correctness.}
-		\item \textbf{Extractability.} Exists $\extractor$ s.t.  $\left(f, y, \mathbf{z}, \mathbf{c}, \pi \Vert \mathbf{x}, \mathbf{r}\right) \leftarrow (\adversary\Vert \extractor)(\pp, \mathbf{r}_\mathcal{A})$ implies $\mathbf{x}$ matches $\adversary$'s output $(f, y, \mathbf{z}, \mathbf{c}, \pi)$.
-		\item \textbf{Compactness.} $\mathbf{c}$ and $\pi$ are small.
+		\item \textbf{Correctness.}\pause
+		\item \textbf{Extractability.} Exists $\extractor$ s.t.  $\left(f, y, \mathbf{z}, c, \pi \Vert \mathbf{x}, \mathbf{r}\right) \leftarrow (\adversary\Vert \extractor)(\pp, \mathbf{r}_\mathcal{A})$\pause\\ implies $\mathbf{x}$ matches $\adversary$'s output $(f, y, \mathbf{z}, c, \pi)$.\pause
+		\item \textbf{Compactness.} $c$ and $\pi$ are small.
 	\end{itemize}
 \end{frame}
