@@ -7,7 +7,7 @@
 			\overline{v} = \prod_{k \in \mathbb{Z}_w}v_k,\qquad \overline{v}_j = \overline{v}/v_j.
 		\end{equation*}\pause
 		\item \textbf{Commit $\mathbf{x}$:} $[c]_1 := \sum_{i \in \mathbb{Z}_w} x_i \cdot [v_i]_1 = \langle[\mathbf{v}]_1, \mathbf{x}\rangle$.\pause
-		\item \textbf{Open $f$:} $y = \sum_{i \in \mathbb{Z}_w}f_i\cdot x_i,\quad \sum_{i,j \in \mathbb{Z}_w, i\not=j}f_j\cdot x_i\cdot[v_i\cdot\overline{v}_j]_2$.\pause
+		\item \textbf{Open $f$:} $y = \sum_{i \in \mathbb{Z}_w}f_i\cdot x_i,\quad [u]_2 := \sum_{i,j \in \mathbb{Z}_w, i\not=j}f_j\cdot x_i\cdot[v_i\cdot\overline{v}_j]_2$.\pause
 		\item \textbf{Verify $f, y$:} $\langle[1]_1, [u]_2\rangle \isequal \left\langle[c]_1, \sum_{j \in \mathbb{Z}_w}f_j\cdot [\overline{v}_j]_2\right\rangle - y \cdot [\overline{v}]_t$.
 	\end{itemize}
 \end{frame}
